@@ -13,4 +13,4 @@ fu! buffertitle#string()
   return join(filter(labels, fil), sep)
 endf
 
-set title titlestring=%{buffertitle#string()}
+set title titlelen=30000 titlestring=%{buffertitle#string()}
