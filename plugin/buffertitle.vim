@@ -4,7 +4,7 @@ let g:loaded_buffertitle=1
 fu! buffertitle#string()
   let lbl=get(g:, 'buffertitle#label', 'fnamemodify(pathshorten(bufname(v:key + 1)), ":~:.")')
   let mod=get(g:, 'buffertitle#modified', 'v:val."+"')
-  let cur=get(g:, 'buffertitle#current', '"【 ".v:val." 】"')
+  let cur=get(g:, 'buffertitle#current', '"( ".v:val." )"')
   let sep=get(g:, 'buffertitle#separator', '  ')
   let fil=get(g:, 'buffertitle#filter', 'bufexists(v:key + 1) && buflisted(v:key + 1)')
   let labels=map(range(bufnr('$')), lbl)
